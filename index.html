@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clothes & Love</title>
+        <link rel="shortcut icon" href="pic/icons/Logo.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="data/data.js"></script>
+    </head>
+    <body>
+        <a id="topo"></a>
+        <header>
+            <div id="social">
+                <a href="https://www.facebook.com/" target="_blank"><img src="pic/icons/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="pic/icons/instagram.png" alt="instagram"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="pic/icons/twitter.png" alt="twitter"></a>
+                <a href="https://web.whatsapp.com/" target="_blank"><img src="pic/icons/whatsapp.png" alt="whatsapp"></a>
+            </div>
+            <div id="titulo">
+                <img src="pic/icons/Logo.png">
+                <a href="#topo">Clothes & Love</a>
+            </div>
+            <div id="botao_carrinho">
+                <a href="carrinho.html"><img src="pic/icons/buy.png" alt="carrinho de compra"/></a>
+                <div id="qtd_itens"></div>
+            </div>
+        </header>
+       <nav class="menu">
+            <p id="categoriasText">CATEGORIAS</p>
+            <ul id="categorias">
+                <li class="menuprincipal" id="todos">todos</li>
+                <li class="menuprincipal" id="feminino">feminino</li>
+                    <ul class="submenu" id="subFeminino">
+                        <li class="submenuli" id="todos_feminino">Todos</li>
+                        <li class="submenuli" onclick="filtrar('blusas', 'feminino')">Blusas</li>
+                        <li class="submenuli" onclick="filtrar('saias', 'feminino')">Saias</li>
+                        <li class="submenuli" onclick="filtrar('short', 'feminino')">Short</li>
+                    </ul>
+                <li class="menuprincipal" id="masculino">masculino</li>
+                    <ul class="submenu" id="subMasculino">
+                        <li class="submenuli" id="todos_masculino">Todos</li>
+                        <li class="submenuli" onclick="filtrar('camisetas', 'masculino')">Camisetas</li>
+                        <li class="submenuli" onclick="filtrar('moletom', 'masculino')">Moletom</li>
+                        <li class="submenuli" onclick="filtrar('calças', 'masculino')">Calças</li>
+                    </ul>
+            </ul>
+            <p id="preçoText">PREÇO</p>
+            <ul id = "preço">
+                <li class="menuprincipal" onclick="filtrarPreço('maior')">Maior Preço</li>
+                <li class="menuprincipal" onclick="filtrarPreço('menor')">Menor Preço</li>
+            </ul>
+        </nav>
+        <div class="vitrine"> 
+        
+        </div>
+        <a href="#topo"><img src="pic/icons/pageup.png" alt="seta para cima" id="pageup"/></a>
+        <footer>
+            <p>Copyright © 2021 | Karolyne Domiciano Marques | karolyne.d.marques@unesp.br | Presidente Prudente, SP</p>
+        </footer>
+        <script type="text/javascript" src="javascript/index.js"></script>
+    </body>
+</html>

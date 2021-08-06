@@ -1,0 +1,171 @@
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+body{
+    display: grid;
+    grid-template-columns: 60% 2.5% 37.5%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header"
+      "resumo . form"
+      "footer footer footer";
+}
+header{
+    grid-area: header;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.resumo{
+    grid-area: resumo;
+    padding: 0 10px;
+}
+#resumo_header{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color:black;
+    color: white;
+}
+.itens{
+    display: grid;
+    grid-template-columns: 25% 15% 20% 15% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "pic . quantidade . preço"
+      "nome . . . delete";
+    justify-items: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.itens img{
+    grid-area: pic;
+    width: 100%;
+}
+.nome{
+    grid-area: nome;
+    padding: 10px 0px;
+}
+.quantidade{
+    grid-area: quantidade;
+}
+.preço{
+    grid-area: preço;
+}
+.delete{
+    grid-area: delete;
+    width: 20%;
+    margin-left: 100%;
+}
+.delete :hover{
+    cursor: pointer;
+}
+.dadosform{
+    height: 560px;
+    grid-area: form;
+    margin-right: 10px;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+}
+.dadosform form{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+input{
+    border-radius: 5px;
+    margin: 3px;
+    width: 93%;
+    border: 1px gray solid;
+}
+#date{
+    width: 40%; 
+}
+#cpf{
+    width: 52%;
+}
+label[for=date], label[for=cpf]{
+    margin-right: 14%;
+}
+#submit{
+    border-radius: 10px;
+    height: 40px;
+    width: 150px;
+    margin-top: 5%;
+}
+#estado{
+    width: 94%;
+}
+#total{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    background-color: rgb(51, 173, 167);
+}
+footer{
+    grid-area: footer;
+    width: 100%;
+    text-align: center;
+    color: rgb(167, 165, 165);
+    padding: 20px 0;
+}
+#confirmar_dados{
+    padding: 10px;
+}
+#confirmar_dados p {
+    padding: 10px;
+}
+
+/**********************************************************************************************************************/
+@media (max-width: 406px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .resumo{
+        width: 100%;
+    }
+    .delete{
+        width: 30%;
+        margin-top: 100%;
+    }
+    .dadosform  {
+        margin: 10px;
+        width: 100%;
+    }
+    label[for=date], label[for=cpf]{
+    margin-right: 4%;
+    }
+}   
+/**********************************************************************************************************************/
+@media (min-width: 407px) and (max-width: 798px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .resumo{
+        width: 100%;
+    }
+    .delete{
+        width: 30%;
+        margin-top: 100%;
+    }
+    .dadosform  {
+        margin: 10px;
+        width: 100%;
+    }
+    label[for=date], label[for=cpf]{
+    margin-right: 20%;
+    }
+}
+

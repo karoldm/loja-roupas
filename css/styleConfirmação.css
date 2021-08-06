@@ -1,0 +1,105 @@
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+body{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header"
+      "confirm confirm"
+      "resumo entrega"
+      "footer footer";
+}
+header{
+    grid-area: header;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+header div{
+    width: 80%;
+}
+.confirmação{
+    grid-area: confirm;
+    width: 100%;
+    margin: 5px 0;
+    height: 30px;
+    padding: 8px;
+    background-color: rgb(51, 173, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.resumo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.resumo > p, .entrega > p{
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.itens{
+    width: 25%;
+    padding: 0 10px;
+}
+.itens p{
+    padding: 2px 0;
+}
+.itens img{
+    padding-bottom: 15%;
+    width: 100%;
+}
+#total{
+    border-top: 1px black solid;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+.entrega{
+    width: 100%;
+    grid-area: entrega;
+}
+.info{
+    text-align: center;
+    padding: 10px 0;
+}
+.info p{
+    padding: 10px 0;
+}
+footer{
+    grid-area: footer;
+    text-align: center;
+    color: rgb(167, 165, 165);
+    padding: 20px 0;
+}
+@media (max-width: 768px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .itens{
+        width: 40%;
+    }
+    .resumo > p{
+        margin: 0;
+    }
+}
